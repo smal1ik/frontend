@@ -1,12 +1,7 @@
 <template>
-<!-- class="fill-height" -->
   <v-app  :theme='_theme'>
     
     <v-app-bar color="primary">
-
-      <!-- <template v-slot:prepend>
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
-      </template> -->
 
       <v-app-bar-title>
         <v-btn @click="toHome">  
@@ -15,10 +10,6 @@
       </v-app-bar-title>
        
         <v-spacer></v-spacer>
-       
-        <!-- <v-btn icon>
-          <v-icon>mdi-magnify</v-icon>
-        </v-btn> -->
 
         <v-btn 
           v-if="isLoggedIn"
@@ -40,14 +31,6 @@
          <template v-slot:append>
           <v-switch  @change="changeTheme" />
         </template>
-
-      <!-- <template v-slot:append>
-        <v-btn @click="Login">Войти</v-btn>
-
-        <v-switch  @change="changeTheme" />
-
-        <v-btn icon="mdi-dots-vertical" @click="changeTheme"></v-btn>
-      </template> -->
     </v-app-bar>
     
     <v-main class="app-main" > 
@@ -57,27 +40,11 @@
             lg="8"
             offset-lg="2"
           >
-         
              <router-view/>
-           
           </v-col>
         </v-row>        
       </v-container>     
     </v-main>
-    
-
-     <!--
-    <v-navigation-drawer color="green-darken-2" permanent position="right"></v-navigation-drawer>
-    <v-navigation-drawer color="blue-darken-2" temporary></v-navigation-drawer>
-
-
-    <v-app-bar position="bottom" height="20" color="grey-lighten-2" elevation="0">
-      подвал
-    </v-app-bar> 
-    
-    class="grow d-flex flex-column flex-nowrap">
-        <v-row no-gutters class="grow">
-    -->
   </v-app>
 </template>
 

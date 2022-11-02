@@ -24,7 +24,7 @@ const routes = [
   {
     path: '/reg/:remindMode',
     name: 'Reg',
-    component: () => import( '../views/RegView.vue'),    
+    component: () => import( '../views/RegView.vue'),
     props: true
   },
   {
