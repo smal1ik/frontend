@@ -10,7 +10,7 @@ import router from './../router'
 const store = createStore({
 //const store = new Vuex.Store({
     state:{
-        backendUrl: 'https://kptestv1.herokuapp.com/api',
+        backendUrl: 'http://127.0.0.1:8000/api',
         status: '',
         token: localStorage.getItem('access_token') || '',
         user : {},

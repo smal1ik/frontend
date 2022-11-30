@@ -4,7 +4,8 @@
     <v-app-bar color="primary">
 
       <v-app-bar-title>
-        <v-btn @click="toHome">  
+        <v-btn @click="toHome"
+        width="auto">
         Корпоративный портал
         </v-btn>
       </v-app-bar-title>
@@ -27,10 +28,6 @@
         <v-btn icon>
           <v-icon>mdi-dots-vertical</v-icon>
         </v-btn>
-
-         <template v-slot:append>
-          <v-switch  @change="changeTheme" />
-        </template>
     </v-app-bar>
     
     <v-main class="app-main" > 

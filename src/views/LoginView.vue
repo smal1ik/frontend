@@ -41,9 +41,10 @@
 
          <v-text-field
             v-model="password"
+            :rules="passwordRules"
             name="input-10-1"
             label="Пароль"
-            hint="Минимальное количество символов"          
+
             type="password"      
             variant="outlined"     
           ></v-text-field>
@@ -86,9 +87,11 @@ export default {
         password: "",
         valid: true,
         name: '',
+        passwordRules: [
+          v => !!v || 'Пароль пустой',
+        ],
         nameRules: [
-          v => !!v || 'Name is required',
-          v => (v && v.length <= 10) || 'Name must be less than 10 characters',
+          v => !!v || 'Логин пустой',
         ],
         email: '',
         emailRules: [
@@ -127,7 +130,7 @@ export default {
       let password = this.password
       // console.log('url')
       // console.log(`${this.$store.getters.getServerUrl}/auth/jwt/create`)
-      axios.post(`${this.$store.getters.getServerUrl}/auth/jwt/create`,{username: this.username, password: this.password})
+      axios.post(`${this.$store.getters.getServerUrl}/auth/jwt/create/`,{username: this.username, password: this.password})
       .then( res => {
           localStorage.setItem('access_token', res.data.access)
           localStorage.setItem('refresh_token', res.data.refresh)

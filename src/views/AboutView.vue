@@ -14,7 +14,4 @@
         Здесь будет кратко описан портал, его назначение и функционал.
       </v-card-text>
   </v-card>
-  <!-- <div class="about">
-    <h1>This is an about page</h1>
-  </div> -->
 </template>

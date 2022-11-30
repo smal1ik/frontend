@@ -11,11 +11,11 @@
         <v-table>
           <thead>
             <tr>
-              <th class="text-left">ФИО</th>
-              <th class="text-left">Телефон</th>
-              <th class="text-left">Мобильный</th>
-              <th class="text-left">Должность</th>
-              <th class="text-left">Подразделение</th>
+              <th >ФИО</th>
+              <th >Телефон</th>
+              <th >Мобильный</th>
+              <th >Должность</th>
+              <th >Подразделение</th>
               <th class="text-left">Кабинет</th>
             </tr>
           </thead>
@@ -54,7 +54,7 @@
                 <b>Фамилия:</b> {{this.selected.last_name}} <br>
                 <b>Имя:</b> {{this.selected.first_name}}<br>
                 <b>Отчество:</b> {{this.selected.middle_name}}<br>
-                <b>Должность:</b> {{this.selected.post}}<br>
+                <b>Должность:</b> {{this.selected.mail}}<br>
                 <b>Подразделение:</b> {{this.selected.department}}<br>
                 <b>Кабинет:</b> {{this.selected.room}}<br>
                 <b>Внутренний телефон:</b> {{this.selected.inner_phone}}<br>
@@ -138,7 +138,7 @@ export default {
         API.get(`${this.$store.getters.getServerUrl}/workers/all/`)
         .then( res => {
             console.log('response staff')
-            console.log(res)
+            console.log(res.data)
             this.staff = res.data
             
             // localStorage.setItem('access_token', res.data.access)

@@ -2,9 +2,7 @@
   <div>
     <v-card>
       <v-card-header>
-         <div class="text-h6 mb-1">
-          Главная страница
-        </div>
+
       </v-card-header>
 
         <v-btn @click="this.$router.push('/staff')">Справочник сотрудников</v-btn>
